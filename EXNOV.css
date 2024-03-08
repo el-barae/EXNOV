@@ -478,6 +478,9 @@ button.btn:hover {
 	font-size: 2em;
 	word-spacing: 10px;
 }
+.social-icons a{
+	color: var(--black);
+}
  @media(max-width: 1100px)
  {
 	#contact .row {

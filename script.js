@@ -63,10 +63,10 @@ function toggleMobileMenu(menu) {
       smoothScroll('#services', 1000);
     });
 
-    var teamLink = document.querySelector('a[href="#team"]');
+    var teamLink = document.querySelector('a[href="#points-forts"]');
     teamLink.addEventListener('click', function(e) {
       e.preventDefault();
-      smoothScroll('#team', 1000);
+      smoothScroll('#points-forts', 1000);
     });
 
     var contactLink = document.querySelector('a[href="#contact"]');
