@@ -1,0 +1,700 @@
+<!doctype html>
+
+
+	
+
+	<script src="https://kit.fontawesome.com/cd087d14cf.js" crossorigin="anonymous"></script>
+	<style>
+		/* Global Styles */
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* Global Styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+	color: #333;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+	background-color: #6b122f;
+}
+
+.logo{
+  display: flex;
+  background-color: #6b122f;
+  width: 100vw;
+  position: fixed;
+  justify-content: space-between;
+}
+
+nav {
+	display: flex;
+	height: 80px;
+	padding-top: 20px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	margin-left: 20px;
+    margin-right: 25px;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: color 0.3s ease-in-out;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a:hover {
+    background-color: white;
+	color: #6b122f;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+#hamburger-icon {
+	margin: auto 0;
+	display: none;
+	cursor: pointer;
+	background-color: #6b122f;
+  }
+  
+  #hamburger-icon div {
+	width: 50px;
+	height: 5px;
+	background-color: white;
+	margin: 10px 0;
+	transition: 0.4s;
+  }
+  
+  .open .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-12px, 6px);
+	transform: rotate(-45deg) translate(-12px, 10px);
+  }
+  
+  .open .bar2 {
+	opacity: 0;
+  }
+  
+  .open .bar3 {
+	-webkit-transform: rotate(45deg) translate(-10px, -12x);
+	transform: rotate(45deg) translate(-10px, -8px);
+  }
+  
+  .open .mobile-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: #6b122f;
+	height: fit-content;
+  }
+
+  .mobile-menu {
+	display: none;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	height: calc(100vh - 50px);
+	width: 100%;
+	list-style: none;
+  }
+  .mobile-menu li {
+	margin-bottom: 20px;
+  }
+  .mobile-menu a{
+	background-color: white;
+	color: #6b122f;
+    padding: 6px 15px;
+    border-radius: 20px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: color 0.3s ease-in-out;
+    font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  @media only screen and (max-width: 1100px) {
+	header nav {
+	  display: none;
+	}
+  
+	#hamburger-icon {
+	  display: block;
+	}
+	.company h2{
+		display: none;
+	}
+  }
+
+.company{
+    color: white;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 70px 0;
+}
+
+.company h1 {
+	font-size: 8rem;
+	margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.company h2{
+    font-size: 3.5em;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.company p {
+	font-size: 1.3rem;
+	margin-bottom: 25px;
+}
+
+.btn {
+	display: inline-block;
+	background-color: #158726;
+	color: #fff;
+	padding: 12px 24px;
+	font-size: 1.5em;
+	border-radius: 16px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+	background-color: #158726;
+}
+
+/* About Section Styles */
+#about {
+	background-color: #fff;
+	padding: 100px 0;
+}
+
+#about h2 {
+	color: #6b122f;
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+#about p {
+	font-size: 1.3rem;
+	line-height: 1.6;
+	margin-bottom: 40px;
+}
+
+/* Services Section Styles */
+#services {
+	background-color: #6b122f;
+	padding: 100px 0;
+}
+
+#services h2 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.service {
+	flex-basis: 300px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+    border-radius: 25px;
+}
+#services h2{
+    color: #ffffff;
+}
+.service img {
+	margin-bottom: 20px;
+}
+
+.service h3 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.service p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+}
+
+@media(max-width: 1100px){
+	.services {
+		display: block;
+		justify-content: center;
+	}
+	.service{
+		margin: 40px;
+		padding: 40px;
+	}
+}
+
+
+
+/* Team Section Styles */
+#team {
+	background-color: #6b122f;
+	padding: 100px 0;
+}
+
+#team h2 {
+	font-size: 3rem;
+	margin-bottom: 20px;
+    color: #fff;
+}
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #fff;
+}
+
+.member {
+	flex-basis: 300px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #6b122f;
+	box-shadow: -1px -1px 5px 2px #fff;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.member img {
+	margin-bottom: 20px;
+	border-radius: 50%;
+    height: 300px;
+    width: 300px;
+	object-fit: cover;
+	object-position: center;
+    
+}
+/* Point forts Section Styles */
+#points-forts h2{
+	margin-top: 30px;
+	font-size: 2.5rem;
+	color: #6b122f;
+}
+
+
+/* Contact Section Styles */
+#contact {
+	background-color: #6b122f;
+	padding: 100px 0;
+}
+
+#contact h2 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+    color: #fff;
+}
+
+#contact .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#contact .col-6 {
+	flex-basis: 50%;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"], input[type="email"], textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #6b122f;
+	border-radius: 7px;
+	font-size: 1rem;
+	margin-top: 5px;
+}
+
+textarea {
+	height: 150px;
+	resize: none;
+}
+
+button.btn {
+	background-color: #158726;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	border: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: background-color 0.2s ease-in-out;
+}
+
+button.btn:hover {
+	background-color: #076415;
+}
+
+.contact-info {
+	background-color: #fff;
+	padding: 30px;
+	box-shadow: 0 0 10px rgba(0, 0, 2, 0.2);
+	text-align: center;
+    margin: 20px;
+    border-radius: 30%;
+}
+
+.contact-info h3 {
+	font-size: 1.7rem;
+	margin-bottom: 20px;
+}
+
+.contact-info p {
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+}
+
+.social-icons {
+	color: #333;
+	padding: 15px;
+	font-size: 2em;
+	word-spacing: 10px;
+}
+ @media(max-width: 1100px)
+ {
+	#contact .row {
+		display: block;
+		flex-wrap: none;
+	}
+	
+	#contact .col-6 {
+		flex-basis: 0%;
+	}
+ }
+
+/* Styles for the scroll-to-top button */
+#scroll-to-top {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #158726;
+	color: #fff;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 60px;
+  }
+
+  #scroll-to-top:hover {
+	background-color: #076415;
+  }
+@media(max-width: 1100px)
+{
+	#scroll-to-top{
+		font-size: 30px;
+	}
+}
+	</style>
+
+
+<header>
+	<div class="logo">
+	<img src="logo.png" alt="logo">
+	
+	<nav>
+		<ul>
+			<li><a href="#about">QUI SOMMES-NOUS?<br></a></li>
+			<li><a href="#services">SERVICES</a></li>
+			<li><a href="#team">TEAM </a></li>
+			<li><a href="#contact">CONTACT</a></li>
+		</ul>
+	</nav>
+	<div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+		<ul class="mobile-menu">
+			<li><a href="#about">QUI SOMMES-NOUS?<br></a></li>
+			<li><a href="#services">SERVICES</a></li>
+			<li><a href="#team">TEAM </a></li>
+			<li><a href="#contact">CONTACT</a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="company">
+		<h2><br>Bienvenue a</h2><br><h1>BET EXNOV</h1><br>
+		<p>BET EXNOV est un bureau d’étude technique d’ingénierie basé à
+			Tanger et fondé par trois ingénieurs expérimentés et passionnés de la
+			génie civil.</p>
+		<a href="#about" class="btn">Learn More</a>
+	</div>
+</header>
+
+<main>
+	<section id="about">
+		<div class="container">
+			<h2>QUI SOMMES-NOUS?</h2>
+			<p>L’objectif d’EXNOV est la réalisation des études techniques et
+				financières des structures simple et complexe de béton armé ainsi
+				que en charpente métallique.</p>
+			<p>L’optimisation des quantités et du temps de réalisation des travaux
+				est l’un des plus important objectif d’EXNOV.</p>
+			<p>Parmi les points forts d’EXNOV c’est la variété des options et types de
+				solutions.</p>
+			<p> basant sur notre véritable expérience, notre bureau d’étude se
+				spécialise dans les PLANCHERS RETICULES et les DALLES EN POSTTENSION.</p>
+		</div>
+	</section>
+	<section id="services">
+		<div class="container">
+			<h2>NOS SERVICES</h2>
+			<div class="services">
+				<div class="service">
+					<img src="im2.jpg" alt="Service 1">
+					<h3>CONCEPTION</h3>
+					<p>On peut concevoir des plans, des dessins et des modèles en utilisant des logiciels et des technologies de pointe pour optimiser la conception et les coûts du projet.</p>
+				</div>
+				<div class="service">
+					<img src="im1.jpg" alt="Service 2">
+					<h3>ETUDE TECHNIQUE DES PLANS</h3>
+					<p>On peut planifier et coordonner les différentes phases du projet, y compris l'approvisionnement en matériaux, la construction, la surveillance et l'achèvement du projet.</p>
+				</div>
+				<div class="service">
+					<img src="im3.jpg" alt="Service 3">
+					<h3>SUIVI DES TRAVAUX</h3>
+					<p>On peut également fournir des services d'inspection et de supervision de la construction pour garantir que le projet est construit selon les spécifications du plan et des normes de sécurité.</p>
+				</div>
+				<div class="service">	
+					<img src="im3.jpg" alt="Service 4">	
+					<h3>RENFORCEMENT ET REABILITATION</h3>
+					<p>propose des services spécialisés de renforcement et de réhabilitation des structures existantes. En mettant l'accent sur la qualité, la durabilité et la sécurité, nous aidons nos clients à maximiser la valeur de leurs actifs et à assurer leur performance à long terme.</p>
+				</div>
+				<div class="service">
+					<img src="im3.jpg" alt="Service 5">
+					<h3>EXPERTISE ET ASSISTANCE TECHNIQUE</h3>
+					<p>Nos experts offrent des services de consultation et d'expertise technique dans une variété de domaines liés au génie civil, aidant nos clients à prendre des décisions éclairées et à résoudre les défis complexes.</p>
+				</div>
+				<div class="service">
+					<img src="im3.jpg" alt="Service 6">
+					<h3>OPTIMISATION DU QUANTITES ET DU COUT</h3>
+					<p>On propose des services spécialisés d'optimisation des quantités et des coûts pour les projets de génie civil. En collaborant étroitement avec nos clients, nous nous efforçons de trouver des solutions rentables et durables qui répondent pleinement à leurs besoins et à leurs objectifs.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="points-forts">
+		<div class="container">
+			<h2>NOS POINTS FORTS</h2>
+			<div class="service">
+				<img src="im2.jpg" alt="Service 1">
+				<h3>PLANCHES RETICULAIRES</h3>
+				<p>Les planchés réticulaires offrent une grande liberté de
+					conception architecturelle, la possibilité de supprimer les
+					retombées des poutres, une distance entre les poteaux
+					jusqu’au 10m, une mise en œuvre de coffrage facile et
+					rapide, et une optimisation dans le temps d’exécution.</p>
+			</div>
+			<div class="service">
+				<img src="im1.jpg" alt="Service 2">
+				<h3>DALLE POST TENSION</h3>
+				<p>Parmi les avantages des dalles par Post-Tension c’est la
+					possibilité d’atteindre des portées jusqu’à 15m sans
+					retombés, ce qui est très important pour résoudre les
+					contrainte des espaces ouvertes ( sous sols et les salles de
+					conférence…).</p>
+			</div>
+		</div>
+	</section>
+	<!--<section id="team">
+		<div class="container">
+			<h2>notre groupe</h2>
+			<div class="team">
+				<div class="member">
+					<img src="medali.jpg" alt="Team Member 1">
+					<h3>Mohammed ali<br>Akachar</h3>
+					<p>CEO</p>
+				</div>
+				<div class="member">
+					<img src="medali.jpg" alt="Team Member 1">
+					<h3>Mohammed ali<br>Akachar</h3>
+					<p>CEO</p>
+				</div>
+				<div class="member">
+					<img src="medali.jpg" alt="Team Member 1">
+					<h3>Mohammed ali<br>Akachar</h3>
+					<p>CEO</p>
+				</div>
+			</div>
+		</div>
+	</section>       -->
+	<section id="contact">
+		<form class="contact_form" action="#"></form>
+		<div class="container">
+		  <h2>CONTACTER-NOUS</h2>
+		  <div class="row">
+			<div class="col-6">
+			  <form>
+				<div class="form-group">
+				  <label for="name">Name:</label>
+				  <input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-group">
+				  <label for="email">Email:</label>
+				  <input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+				  <label for="message">Message:</label>
+				  <textarea id="message" name="message" required></textarea>
+				</div>
+				<button type="submit" class="btn" onclick="sendMail()">Send Message</button>
+			  </form>
+			</div>
+			<div class="col-6">
+			  <div class="contact-info">
+				<h3>Get In Touch</h3>
+				<p><i class="fa-solid fa-location-dot"></i>   Avenue Moaaouia ben abi soufiane 45, Tetouan Morocco</p>
+				<p><i class="fa-solid fa-phone"></i>   (+212) 610-577219</p>
+				<p><i class="fa-solid fa-envelope"></i>   akacharbet@gmail.com</p>
+				<div class="social-icons">
+				  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+				  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+				  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+				  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</form>
+	</section>
+</main>
+<button id="scroll-to-top" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+	var scrollToTopButton = document.getElementById("scroll-to-top");
+
+window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 300) {
+	scrollToTopButton.style.display = "block";
+  } else {
+	scrollToTopButton.style.display = "none";
+  }
+});
+
+scrollToTopButton.addEventListener("click", function() {
+  scrollToTop(1000);
+});
+
+function scrollToTop(scrollDuration) {
+  var scrollStep = -window.scrollY / (scrollDuration / 15),
+	  scrollInterval = setInterval(function(){
+		if ( window.scrollY != 0 ) {
+		  window.scrollBy( 0, scrollStep );
+		}
+		else clearInterval(scrollInterval); 
+	  },15);
+}
+
+//JavaScript code for the smoothscroll
+function smoothScroll(target, duration) {
+  var targetElement = document.querySelector(target);
+  var targetPosition = targetElement.offsetTop;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var startTime = null;
+
+  function animation(currentTime) {
+	if (startTime === null) startTime = currentTime;
+	var timeElapsed = currentTime - startTime;
+	var run = ease(timeElapsed, startPosition, distance, duration);
+	window.scrollTo(0, run);
+	if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+	t /= d / 2;
+	if (t < 1) return c / 2 * t * t + b;
+	t--;
+	return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+requestAnimationFrame(animation);
+}
+
+var aboutLink = document.querySelector('a[href="#about"]');
+aboutLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  smoothScroll('#about', 1000);
+});
+
+var servicesLink = document.querySelector('a[href="#services"]');
+servicesLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  smoothScroll('#services', 1000);
+});
+
+var teamLink = document.querySelector('a[href="#team"]');
+teamLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  smoothScroll('#team', 1000);
+});
+
+var contactLink = document.querySelector('a[href="#contact"]');
+contactLink.addEventListener('click', function(e) {
+  e.preventDefault();
+  smoothScroll('#contact', 1000);
+});
+
+var Linkmore = document.querySelector('.btn');
+Linkmore.addEventListener('click', function(e) {
+  e.preventDefault();
+  smoothScroll('#about', 1000);
+});
+function toggleMobileMenu(menu) {
+  menu.classList.toggle('open');
+}
+  </script>
+  
+
+</!doctype>
