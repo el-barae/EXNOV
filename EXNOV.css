@@ -8,8 +8,8 @@
 
 :root {
 	--black: #333;
-	--yellow: #f3c306;;
-	--orange: #dc9c06;
+	--yellow: #f3c306;
+	--orange: rgb(215, 132, 6); /*#dc9c06;*/
   }
 
 body {
@@ -35,6 +35,7 @@ header {
   background-color: var(--yellow);
   width: 100vw;
   position: fixed;
+  z-index: 1;
   justify-content: space-between;
   overflow: hidden;
 }
@@ -144,7 +145,7 @@ nav a:hover {
 
   
   .slider{
-    width:100vw;
+    width:98vw;
     height: 90vh;
     overflow: hidden;
 }
@@ -174,7 +175,7 @@ figure{
 }
 
 .slide img{
-    width: 100vw;
+    width: 93vw;
     height: 1000px;
 }
 
@@ -240,7 +241,7 @@ figure{
     color: white;
 	text-align: center;
 	padding-bottom: 60px;
-	padding-top: 80px;
+	padding-top: 100px;
 }
 
 .company h1 {
