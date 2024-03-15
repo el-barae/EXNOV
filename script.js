@@ -22,6 +22,23 @@ var scrollToTopButton = document.getElementById("scroll-to-top");
             else clearInterval(scrollInterval); 
           },15);
     }
+
+    window.addEventListener('scroll', function() {
+      var whatsappButton = document.getElementById('whatsapp');
+      var scrollPosition = window.scrollY;
+      if (scrollPosition < 300) {
+          whatsappButton.style.display = 'none'; // Hide the button if scroll position is less than 300 pixels
+      } else {
+          whatsappButton.style.display = 'inline-block'; // Show the button otherwise
+      }
+  });
+
+    window.addEventListener('DOMContentLoaded', function() {
+      whatsappButton.style.display = 'none';
+      setTimeout(function() {
+          whatsappButton.style.display = 'inline-block'; // Show the button after 5 seconds
+      }, 5000);
+  });
     //nav
 function toggleMobileMenu(menu) {
   menu.classList.toggle('open');
@@ -102,61 +119,6 @@ function toggleMobileMenu(menu) {
       alert("your message send successfully");
     })
     .catch((err) => console.log(err));
-
-
-    /*let slideIndex = 0;
-
-function moveSlide(n) {
-  const slides = document.querySelectorAll('.slider img');
-  const totalSlides = slides.length;
-
-  slideIndex += n;
-  if (slideIndex < 0) {
-    slideIndex = totalSlides - 1;
-  } else if (slideIndex >= totalSlides) {
-    slideIndex = 0;
-  }
-
-  const offset = -slideIndex * 100;
-  document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
-}
-
-
-const radioButtons = document.querySelectorAll('input[type="radio"]');
-const slides = document.querySelector('.slides');
-
-radioButtons.forEach((radio, index) => {
-  radio.addEventListener('change', () => {
-    slides.style.setProperty('--index', index);
-  });
-});
-
-
-
-
-var slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}*/
 
 
 // Get Slider Items | Array.form [ES6 Feature]
