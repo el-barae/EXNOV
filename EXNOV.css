@@ -519,8 +519,13 @@ button.btn:hover {
 	font-size: 2em;
 	word-spacing: 10px;
 }
+
+.container i{
+	margin-right: 20px;
+}
 .social-icons a{
 	color: var(--black);
+	font-size: 40px;
 }
  @media(max-width: 1100px)
  {
@@ -532,6 +537,10 @@ button.btn:hover {
 	#contact .col-6 {
 		flex-basis: 0%;
 		animation-range: entry 10% cover 15%;
+	}
+
+	.social-icons a{
+		font-size: 80px;
 	}
  }
 
